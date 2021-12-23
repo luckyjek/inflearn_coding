@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    console.log(axios);
+
+    axios.get('https://jsonplaceholder.typicode.com/todos/1').then(function(result){
+      console.log('status', result.status);
+      console.log('data', result.data);
+    }).catch(function(error){
+      console.log('에러발생 ', error);
+    })
+
+    console.log('바로 실행');
+  </script>
+</head>
+
+<body>
+  <script>
+
+
+  </script>
+</body>
+
+</html>
