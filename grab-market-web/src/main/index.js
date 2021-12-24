@@ -39,7 +39,7 @@ function MainPage() {
                             <div className="product-card">
                                 <Link
                                     className="product-link"
-                                    to={`/products/${index}`}
+                                    to={`/products/${product.id}`}
                                 >
                                     <div>
                                         <img
