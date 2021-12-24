@@ -1,38 +1,23 @@
-.App {
-  text-align: center;
+html,
+body,
+#root,
+#root > div {
+    height: 100%;
 }
+/*
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+Q.
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+body에 길이 100%를 줄 때 
+이렇게 주셨는데 왜 #root를 써야 하나요? 어쩌다가 클래스 명이 루트가 된건가요?
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+A. 
 
-.App-link {
-  color: #61dafb;
-}
+#root같은 경우는 react에서 자동으로 만들어주는 div 태그라고 보시면 됩니다!
+개발자도구에서 html 요소들을 확인해보면, id가 root인 div 
+태그가 포함되어 있습니다. 
+그래서 body 태그의 최상위 자식으로 있는 #root 
+태그에도 height를 줘서 우리가 코딩하는 컴포넌트는 
+부모가 100%인 상태로 시작할 수 있어서 높이 조절이 자유롭다는 장점이 있습니다.
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+감사합니다. */
