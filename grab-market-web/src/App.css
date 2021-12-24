@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: normal; /*antd로 부터 받아온 속성*/
+}
 html,
 body,
 #root,
@@ -25,6 +30,22 @@ A.
     display: flex;
     justify-content: center;
     border-bottom: 1px solid gray;
+}
+
+#header-area {
+    width: 1024px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*#header-area > img {
+    상위 선택자로 지금 Link가 걸려있다. 그래서 아래처럼 
+    자식 전체 중의 구분하는 방식으로 사용한다. */
+#header-area img {
+    width: 128px;
+    height: 36px;
 }
 
 #body {
