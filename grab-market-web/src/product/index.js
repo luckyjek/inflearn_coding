@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import "./index.css";
 import { useEffect, useState } from "react";
 function ProductPage() {
     const { id } = useParams(); //App.js로 부터 받아온 :id (parameter_매개변수)가 들어오게된다.
@@ -21,7 +22,30 @@ function ProductPage() {
             });
     }, []);
     console.log("product", product);
-    return <h1>상품 상세 페이지{id}상품</h1>;
+
+    if (product === null) {
+        return <h1>상품 정보를 받고 있습니다.</h1>;
+    }
+    return (
+        <>
+            {/*데이터가 지금 비동기 통신으로 받아오고있으므로 데이터를 받아오기도 전에 
+        product.imageUrl을 불러오려고하니까 오류가 난다. 왜? 지금은 null값이다.
+        따라서 product가 정상적으로 들어오지 않은 상태에서는 방어 코드를 작성해줘야한다. */}
+            <div id="image-box">
+                <img src={"/" + product.imageUrl} />
+            </div>
+            <div id="profile-box">
+                <img src="/images/icons/avatar.png" />
+                <span>{product.seller}</span>
+            </div>
+            <div id="contents-box">
+                <div id="name">{product.name}</div>
+                <div id="price">{product.price}원</div>
+                <div id="createdAt">2020.12.8</div>
+                <div id="description">{product.description}</div>
+            </div>
+        </>
+    );
 }
 
 export default ProductPage;

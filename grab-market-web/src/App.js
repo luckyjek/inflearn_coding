@@ -12,19 +12,27 @@ import ProductPage from "./product";
 function App() {
     return (
         <div>
-            <Switch>
-                <Route exact={true} path={"/"}>
-                    <MainPageComponent />
-                </Route>
-                {/*  //:붙은곳이 숫자를 자유롭게 입력할 수 있게해준다. 그리고 자유롭게 입력한 숫자를 아래 
+            <div id="header">
+                <div id="header-area">
+                    <img src="/images/icons/logo.png" />
+                </div>
+            </div>
+            <div id="body">
+                <Switch>
+                    <Route exact={true} path={"/"}>
+                        <MainPageComponent />
+                    </Route>
+                    {/*  //:붙은곳이 숫자를 자유롭게 입력할 수 있게해준다. 그리고 자유롭게 입력한 숫자를 아래 
                 //  <ProductPage /> Page에서 받을 수 있게된다.*/}
-                <Route exact={true} path={"/products/:id"}>
-                    <ProductPage />
-                </Route>
-                <Route exact={true} path={"/upload"}>
-                    <UploadPage />
-                </Route>
-            </Switch>
+                    <Route exact={true} path={"/products/:id"}>
+                        <ProductPage />
+                    </Route>
+                    <Route exact={true} path={"/upload"}>
+                        <UploadPage />
+                    </Route>
+                </Switch>
+            </div>
+            <div id="footer"></div>
         </div>
     );
 }
