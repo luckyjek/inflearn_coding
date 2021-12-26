@@ -10,11 +10,9 @@ function ProductPage() {
         //랜더링 될때마다 axios통신을 계속 하지 않기위해 , useEffect를 사용해서 라이프 사이클을 조절.
         //즉, 딱 한번만 통신하게 해준다.
         axios
-            .get(
-                `https://ca6ec645-a4d6-4572-82a1-6768e39df010.mock.pstmn.io/products/${id}`
-            )
+            .get(`http://localhost:8080/products/${id}`)
             .then(function (result) {
-                setProduct(result.data);
+                setProduct(result.data.product);
                 console.log(result);
             })
             .catch(function (error) {
