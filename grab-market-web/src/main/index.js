@@ -46,47 +46,47 @@ function MainPage() {
                 {banners.map(function (banner, index) {
                     return (
                         <Link to={banner.href}>
-                            <div id="banner">
+                            <div id='banner'>
                                 <img src={`${API_URL}/${banner.imageUrl}`} />
                             </div>
                         </Link>
                     );
                 })}
             </Carousel> */}
-            <h1 id="product-headline">판매되는 상품들</h1>
-            <div id="product-list">
+            <h1 id='product-headline'>판매되는 상품들</h1>
+            <div id='product-list'>
                 {products.map(function (product, index) {
                     return (
-                        <div className="product-card">
+                        <div className='product-card'>
                             {product.soldout === 1 && (
-                                <div className="product-blur" />
+                                <div className='product-blur' />
                             )}
                             <Link
-                                className="product-link"
+                                className='product-link'
                                 to={`/products/${product.id}`}
                             >
                                 <div>
                                     <img
-                                        className="product-img"
+                                        className='product-img'
                                         src={`${API_URL}/${product.imageUrl}`}
                                     />
                                 </div>
-                                <div className="product-contents">
-                                    <span className="product-name">
+                                <div className='product-contents'>
+                                    <span className='product-name'>
                                         {product.name}
                                     </span>
-                                    <span className="product-price">
+                                    <span className='product-price'>
                                         {product.price}원
                                     </span>
-                                    <div className="product-footer">
-                                        <div className="product-seller">
+                                    <div className='product-footer'>
+                                        <div className='product-seller'>
                                             <img
-                                                className="product-avatar"
-                                                src="images/icons/avatar.png"
+                                                className='product-avatar'
+                                                src='images/icons/avatar.png'
                                             />
                                             <span>{product.seller}</span>
                                         </div>
-                                        <span className="product-date">
+                                        <span className='product-date'>
                                             {dayjs(product.createdAt).fromNow()}
                                         </span>
                                     </div>

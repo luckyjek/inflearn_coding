@@ -25,7 +25,7 @@ app.get("/banners", (req, res) => {
     })
         .then((result) => {
             res.send({
-                bannsers: result,
+                banners: result,
             });
         })
         .catch((error) => {
