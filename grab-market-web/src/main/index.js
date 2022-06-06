@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { API_URL } from "../config/constants.js";
-// import { Carousel } from "antd";
+import { Carousel } from "antd";
 
 dayjs.extend(relativeTime);
 
@@ -42,8 +42,8 @@ function MainPage() {
     }, []);
     return (
         <>
-            {/* <Carousel autoplay autoplaySpeed={3000}>
-                {banners.map(function (banner, index) {
+            <Carousel autoplay autoplaySpeed={3000}>
+                {banners.map( (banner, index) => {
                     return (
                         <Link to={banner.href}>
                             <div id='banner'>
@@ -52,7 +52,7 @@ function MainPage() {
                         </Link>
                     );
                 })}
-            </Carousel> */}
+            </Carousel>
             <h1 id='product-headline'>판매되는 상품들</h1>
             <div id='product-list'>
                 {products.map(function (product, index) {

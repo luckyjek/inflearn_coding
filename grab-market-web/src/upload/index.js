@@ -59,12 +59,14 @@ function UploadPage() {
                         showUploadList={false}
                         onChange={onChangeImage}
                     >
-                        {imageUrl ? (
+                        {imageUrl 
+                        ? (
                             <img
                                 id="upload-img"
                                 src={`${API_URL}/${imageUrl}`}
                             />
-                        ) : (
+                        ) 
+                        : (
                             <div id="upload-img-placeholder">
                                 <img src="/images/icons/camera.png" />
                                 <span>이미지를 업로드해주세요.</span>
